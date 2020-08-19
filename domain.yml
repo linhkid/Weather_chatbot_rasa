@@ -1,0 +1,53 @@
+slots:
+  location:
+    type: text
+  name:
+    type: text
+
+intents:
+ - greet
+ - goodbye
+ - inform
+ - affirm
+ - deny
+ - mood_great
+ - mood_unhappy
+ - bot_challenge
+ - hello_name
+ - my_name_is
+
+entities:
+ - location
+ - name
+
+templates:
+  utter_greet:
+    - text: 'Hello! How can I help?'
+    - text: 'Hi!'
+  utter_goodbye:
+    - text: 'Talk to you later.'
+    - text: 'Bye bye :('
+  utter_ask_location:
+    - text: 'In what location?'
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_did_that_help:
+    - text: "Did that help you?"
+    - text: "Is that helpful?"
+  utter_hello_name:
+    - text: "It's nice to meet you, {name}"  
+    - text: "A pleasure to meet you, {name}"
+
+actions:
+ - utter_greet
+ - utter_goodbye
+ - utter_ask_location
+ - action_weather
+ - utter_cheer_up
+ - utter_did_that_help
+ - utter_happy
+ - utter_iamabot
+ - utter_hello_name
